@@ -6,27 +6,64 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
+  position: absolute;
+  left: 400px;
+  top: 200px; 
+  overflow: hidden; 
+}
 
-  
+a.skip:focus{
+  position: static;
+  width: auto;
+  height: auto;
 }
 
 
   /* Requirement 2 code here -- Do not remove this comment. */
+  
+nav ul li:focus{
+    /* display: inline;
+    margin-right: 5%; */
+    border-top-color: yellow;
+    outline-width: 10px; 
+    
+  }
 
 
   /* Requirement 3 code here -- Do not remove this comment. */
-
+/* .grid instead? */
+  .container{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 30px;
+}
 
   /* Requirement 4 code here -- Do not remove this comment. */
-
-
+.intro{
+  background-image: url("header.jpg");
+  background-color: #858585;
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   /* Requirement 5 code here -- Do not remove this comment. */
+.about, .clients, .method, .contact{
+  grid-column: 2;
+  }
 
   /* Requirement 6 code here -- Do not remove this comment. */
-
+.container img{
+  width: 90%;
+}
 
   /* Requirement 7 code here -- Do not remove this comment. */
-  
+
+.about-image, .clients-image, .method-image, .contact-image{
+  grid-column: 1 / span -1;
+  max-height: 500px;
+}
 
   /* Requirement 8 code here -- Do not remove this comment. */
 
@@ -41,6 +78,13 @@ a.skip{
 
   /* Requirement 9 code here -- Do not remove this comment. */
 
+/* .intro text, .about text, .clients text .method text; contact text; */
+
+div.text{
+  text-align: center;
+  max-height: 30%;
+  overflow: scroll;
+}
 
 
 
@@ -51,8 +95,8 @@ a.skip{
     padding-top: 35px;
     /* Requirement 10 code here -- Do not remove this comment. */
 
-    text-align:right
-
+    text-align:right;
+    align-items: right;
   }
 
   nav li{
@@ -60,22 +104,40 @@ a.skip{
     margin-right:0;
   }
 
-  
   /* Requirement 11 code here -- Do not remove this comment. */
 
-
+a.skip:focus{
+position: relative;
+top: 20px ;
+bottom: 0px;
+left: auto;
+right: 0px;
+}
 
   /* Requirement 12 code here -- Do not remove this comment. */
-  
+.container{
+display: grid;
+grid-column: 50px auto 500px auto 50px;
+grid-row: 300px 300px 300px 300px 
 
+}
 
   /* Requirement 13 code here -- Do not remove this comment. */
- 
+  .about, .method, .clients-image, .contact-image{
+    grid-column: 3 / span -1;
+  }
 
   /* Requirement 14 code here -- Do not remove this comment. */
- 
+  .clients, .contact, .about-image, .method-image{
+    grid-column: 2 / span 5;
+  }
 
   /* Requirement 15 code here -- Do not remove this comment. */
+  .container img{
+    /* max-width: 100%;
+    height: auto; */
+    object-fit: contain;
+}
 }
 
 /** Code for prefers reduced motion **/
