@@ -75,9 +75,7 @@ img{
 
   /* Requirement 9 code here -- Do not remove this comment. */
 
-/* .intro text, .about text, .clients text .method text; contact text; */
-
-.text{
+  .about text, .clients text .method text, .contact text{
   align-self: center;
   max-height: 40%;
   overflow: scroll;
